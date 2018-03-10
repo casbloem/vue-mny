@@ -1,0 +1,25 @@
+{
+  "name": "vue-mny",
+  "version": "0.0.1",
+  "description": "Small filter for all money formatting in Vue.",
+  "main": "vue-mny.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/casbloem/vue-luxon.git"
+  },
+  "keywords": [
+    "vue",
+    "money",
+    "vue-mny"
+  ],
+  "author": "Cas Bloem",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/casbloem/vue-mny/issues"
+  },
+  "homepage": "https://vue-mny.cblm.nl/example/example.html",
+  "dependencies": {}
+}
