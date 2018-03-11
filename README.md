@@ -34,12 +34,15 @@ see [vue-mny example](https://vue-luxon.cblm.nl/example/example.html) to see it 
 
 
 ### Options
+```javascript
 {
     locale: 'en-US',
     style: "currency",
     currency: 'USD',
     currencyDisplay: 'symbol',
 }
+```
+
 
 ##### locale
 A string with a BCP 47 language tag.
