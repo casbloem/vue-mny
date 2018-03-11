@@ -1,0 +1,23 @@
+{
+  "name": "vue-luxon-example",
+  "version": "1.0.0",
+  "scripts": {
+    "prodjs": "browserify src/app.js | uglifyjs -c > dist/app.js",
+    "tailwindsass": "bash ./node_modules/.bin/tailwind build ../example/src/app.scss -c ../example/tailwind.js -o ../example/src/tailwinded.scss",
+    "sass": "node-sass src/tailwinded.scss dist/app.css --output-style compressed",
+    "prod": "npm run prodjs && npm run tailwindsass && npm run sass"
+  },
+  "devDependencies": {
+    "node-sass": "^4.7.2",
+    "tailwindcss": "^0.4.3",
+    "uglifyjs": "^2.4.11",
+    "vue": "^2.5.14"
+  },
+  "browser": {
+    "vue": "vue/dist/vue.common.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "MIT",
+  "description": "SEE: casbloem/vue-luxon"
+}

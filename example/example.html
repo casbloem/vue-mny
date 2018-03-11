@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>vue-mny</title>
+<link href="https://fonts.googleapis.com/css?family=Noto+Sans:400,400i,700,700i" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css?family=Abel" rel="stylesheet">
+<link href="dist/app.css" rel="stylesheet">
+</head>
+<body>
+    <div id="app" v-cloak>
+        <div class="container mx-auto px-4">
+                <div class="bg-white mx-auto max-w-md shadow rounded p-4">
+                    <span class="block font-bold my-2 p-1">vue-mny</span>
+                    
+                    <div class="url-holder">
+                        <a class="url-holder__url" href="https://www.npmjs.com/package/vue-mny">NPM</a>
+                        <a class="url-holder__url" href="https://github.com/casbloem/vue-mny">GitHub</a>
+                    </div>
+
+<div class="codeblock">
+<small class="codeblock__title codeblock__title--vars">VARIABLES</small>
+<pre class="codeblock__pre">
+input:              <input class="codeblock__input" type="text" v-model="input1"><br>
+</pre>
+</div>
+    
+                    <div class="codeblock">
+                        <small class="codeblock__title codeblock__title--code">CODE</small>
+                        <pre class="codeblock__code" v-pre>&lt;span v-mny=&quot;input&quot;&gt;&lt;/span&gt;</pre>
+                        <span class="codeblock__result"><small class="codeblock__title codeblock__title--result">RESULT</small>
+                            <span v-mny="input1"></span>
+                    </div>
+
+<div class="codeblock">
+<small class="codeblock__title codeblock__title--vars">VARIABLES</small>
+<pre class="codeblock__pre">
+locale:             <input class="codeblock__input" type="text" v-model="testlocale"><br>
+style:              <input class="codeblock__input" type="text" v-model="teststyle"><br>
+currency:           <input class="codeblock__input" type="text" v-model="testcurrency"><br>
+currencyDisplay:    <input class="codeblock__input" type="text" v-model="testcurrencyDisplay">
+</pre>
+<div class="relative">
+<small class="codeblock__title codeblock__title--code">CODE</small>
+<pre class="codeblock__code">
+&lt;span v-mny=&quot;{
+    input: input1,
+    locale: '<span v-text='testlocale'></span>',
+    style: '<span v-text='teststyle'></span>',
+    currency: '<span v-text='testcurrency'></span>',
+    currencyDisplay: '<span v-text='testcurrencyDisplay'></span>'
+}&quot;&gt;&lt;/span&gt;
+</pre>
+</div>            
+                <span class="codeblock__result"><small class="codeblock__title codeblock__title--result">RESULT</small>
+                 <span v-mny="{ input: input1, locale: testlocale, style: teststyle, currency: testcurrency, currencyDisplay: testcurrencyDisplay }"></span>
+</div>
+
+                  
+
+
+                
+        </div>
+    </div>
+
+    </div>
+
+    <script src="dist/app.js?454ddss2ddfg435f435"></script>
+</body>
+</html>

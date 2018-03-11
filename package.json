@@ -1,7 +1,7 @@
 {
   "name": "vue-mny",
-  "version": "0.0.2",
-  "description": "Small filter for all money formatting in Vue.",
+  "version": "0.1.0",
+  "description": "Money formatting for Vue",
   "main": "vue-mny.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
