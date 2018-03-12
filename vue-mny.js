@@ -25,7 +25,9 @@ module.exports = {
         locale: "en-US",
         style: "currency",
         currency: "USD",
-        currencyDisplay: "symbol"
+        currencyDisplay: "symbol",
+
+        env: 'prod',
       },
       optionsUser
     );
@@ -40,6 +42,7 @@ module.exports = {
           }).format(raw / 100)
         );
       } catch (err) {
+        if(options.env == 'dev') console.error(err);
         return "[oeps]";
       }
     };

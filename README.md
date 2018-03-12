@@ -2,7 +2,7 @@
 vue-mny  money formatting for Vue
 
 ### Example
-You can find an example at http://vue-mny.cblm.nl/example/example.html
+You can find an example at https://packages.cblm.nl/examples/vue-mny
 
 
 ### Setup
@@ -29,7 +29,7 @@ Vue.use(vueMny, {
 <span v-mny="{ input: number, locale: '', ... }"></span>
 ```
 
-see [vue-mny example](http://vue-mny.cblm.nl/example/example.html) to see it live.
+see [vue-mny example](https://packages.cblm.nl/examples/vue-mny) to see it live.
 
 
 
