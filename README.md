@@ -1,6 +1,8 @@
 # vue-mny
 vue-mny  money formatting for Vue
 
+[![npm version](https://badge.fury.io/js/vue-mny.svg)](https://badge.fury.io/js/vue-mny)
+
 ### Example
 You can find an example at https://packages.cblm.nl/examples/vue-mny
 
