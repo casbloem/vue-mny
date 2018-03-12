@@ -1,7 +1,10 @@
 module.exports = {
   install: function(Vue, optionsUser) {
     const extend = function() {
-      let extended = {}, deep = false, i = 0, length = arguments.length;
+      let extended = {},
+        deep = false,
+        i = 0,
+        length = arguments.length;
       if (Object.prototype.toString.call(arguments[0]) === "[object Boolean]") {
         deep = arguments[0];
         i++;
@@ -9,7 +12,14 @@ module.exports = {
       let merge = function(obj) {
         for (let prop in obj) {
           if (Object.prototype.hasOwnProperty.call(obj, prop)) {
-            if (deep && Object.prototype.toString.call(obj[prop]) === "[object Object]") { extended[prop] = extend(true, extended[prop], obj[prop]);} else { extended[prop] = obj[prop]; }
+            if (
+              deep &&
+              Object.prototype.toString.call(obj[prop]) === "[object Object]"
+            ) {
+              extended[prop] = extend(true, extended[prop], obj[prop]);
+            } else {
+              extended[prop] = obj[prop];
+            }
           }
         }
       };
@@ -27,22 +37,20 @@ module.exports = {
         currency: "USD",
         currencyDisplay: "symbol",
 
-        env: 'prod',
+        env: "prod"
       },
       optionsUser
     );
 
     const moneyfy = (raw, options) => {
       try {
-        return (
-          new Intl.NumberFormat(options.locale, {
-            style: options.style,
-            currency: options.currency,
-            currencyDisplay: options.currencyDisplay
-          }).format(raw / 100)
-        );
+        return new Intl.NumberFormat(options.locale, {
+          style: options.style,
+          currency: options.currency,
+          currencyDisplay: options.currencyDisplay
+        }).format(raw / 100);
       } catch (err) {
-        if(options.env == 'dev') console.error(err);
+        if (options.env == "dev") console.error(err);
         return "[oeps]";
       }
     };

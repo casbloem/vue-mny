@@ -25,8 +25,8 @@ Vue.use(vueMny, {
 // number = integer
 <span v-mny="number"></span>
 
-// you may simply chain options
-<span v-mny="{ input: number, locale: '', ... }"></span>
+// you may simply chain options to override them
+<span v-mny="{ input: number, locale: 'nl-NL', ... }"></span>
 ```
 
 see [vue-mny example](https://packages.cblm.nl/examples/vue-mny) to see it live.
@@ -55,3 +55,7 @@ The currency to use in currency formatting. Possible values are the ISO 4217 cur
 
 ##### currencyDisplay
 How to display the currency in currency formatting. Possible values are `symbol` to use a localized currency symbol such as €, `code` to use the ISO currency code, `name` to use a localized currency name such as `dollar`; the default is `symbol`.
+
+
+
+
