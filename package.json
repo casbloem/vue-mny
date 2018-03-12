@@ -1,6 +1,6 @@
 {
   "name": "vue-mny",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "description": "Money formatting for Vue",
   "main": "vue-mny.js",
   "repository": {
