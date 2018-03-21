@@ -1,10 +1,18 @@
 # vue-mny
-vue-mny  money formatting for Vue
+Currency formatting for all currencies, and all languages. As a simple Vue plugin.
 
-[![GitHub version](https://badge.fury.io/gh/casbloem%2Fvue-mny.svg)](https://badge.fury.io/gh/casbloem%2Fvue-mny)
-[![npm version](https://badge.fury.io/js/vue-mny.svg)](https://badge.fury.io/js/vue-mny)
+[![GitHub last commit](https://img.shields.io/github/last-commit/casbloem/vue-mny.svg)](#)
+[![GitHub version](https://img.shields.io/github/package-json/v/casbloem/vue-mny.svg)](https://github.com/casbloem/vue-mny)
+
+
+[![npm version](https://img.shields.io/npm/v/vue-mny.svg)](https://npmjs.com/package/vue-mny)
+[![npm downloads](https://img.shields.io/npm/dt/vue-mny.svg)](https://npmjs.com/package/vue-mny)
+[![Build Status](https://travis-ci.org/casbloem/vue-mny.svg?branch=master)](#)
+
+
 
 ### Example
+
 You can find an example at https://packages.cblm.nl/examples/vue-mny
 
 

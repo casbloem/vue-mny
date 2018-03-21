@@ -1,33 +1,20 @@
 module.exports = {
   install: function(Vue, optionsUser) {
     const extend = function() {
-      let extended = {},
-        deep = false,
-        i = 0,
-        length = arguments.length;
-      if (Object.prototype.toString.call(arguments[0]) === "[object Boolean]") {
-        deep = arguments[0];
-        i++;
-      }
-      let merge = function(obj) {
-        for (let prop in obj) {
-          if (Object.prototype.hasOwnProperty.call(obj, prop)) {
-            if (
-              deep &&
-              Object.prototype.toString.call(obj[prop]) === "[object Object]"
-            ) {
-              extended[prop] = extend(true, extended[prop], obj[prop]);
-            } else {
-              extended[prop] = obj[prop];
-            }
-          }
-        }
-      };
-      for (; i < length; i++) {
+      let out = {};
+      for (let i = 0, len = arguments.length; i < len; ++i) {
         let obj = arguments[i];
-        merge(obj);
+        if (!obj) continue;
+        for (let key in obj) {
+          if (!obj.hasOwnProperty(key) || !obj[key]) continue;
+          if (Object.prototype.toString.call(obj[key]) === "[object Object]") {
+            out[key] = extend(out[key], obj[key]);
+            continue;
+          }
+          out[key] = obj[key];
+        }
       }
-      return extended;
+      return out;
     };
 
     const optionsGlobal = extend(
