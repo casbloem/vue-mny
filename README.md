@@ -70,12 +70,12 @@ How to display the currency in currency formatting. Possible values are `symbol`
 
 **version 0.2.2**  
 - vue-mny function splitted from vue's install module.
-- Some docs improvement
+- docs improvement
 - Added test.js.
 
 
 **version 0.2.1**  
-- 
+- docs improvement
 
 
 **< version 0.2.0**  
