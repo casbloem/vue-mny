@@ -36,6 +36,7 @@ Vue.use(vueMny, {
 
 ![carbon 6](https://user-images.githubusercontent.com/5813001/38521565-621af1b6-3c46-11e8-9d1d-b83ae93e74fb.png)
 
+More
 
 see [vue-mny example](https://packages.cblm.nl/examples/vue-mny) to see it live.
 
@@ -45,7 +46,6 @@ see [vue-mny example](https://packages.cblm.nl/examples/vue-mny) to see it live.
 ```javascript
 {
     locale: 'en-US',
-    style: "currency",
     currency: 'USD',
     currencyDisplay: 'symbol',
 }
@@ -53,20 +53,26 @@ see [vue-mny example](https://packages.cblm.nl/examples/vue-mny) to see it live.
 
 
 ##### locale
-A string with a BCP 47 language tag.
-
-##### style
-The formatting style to use. Possible values are `decimal` for plain number formatting, and `currency` for currency formatting. The default is `decimal`.
+*default:* `en-US`    
+A string with a [BCP 47 language tag](https://www.w3.org/International/articles/language-tags/).
 
 ##### currency
-The currency to use in currency formatting. Possible values are the ISO 4217 currency codes, such as `USD` for the US dollar, `EUR` for the euro, or `CNY` for the Chinese RMB. There is no default value; if the style is `currency`, the currency property must be provided.
+
+*default:* `USD`   
+
+Possible values are the [ISO 4217 currency codes](https://www.ibm.com/support/knowledgecenter/en/SSZLC2_7.0.0/com.ibm.commerce.payments.developer.doc/refs/rpylerl2mst97.htm), such as `USD` for the US dollar, `EUR` for the euro, or `CNY` for the Chinese RMB.
 
 ##### currencyDisplay
-How to display the currency in currency formatting. Possible values are `symbol` to use a localized currency symbol such as €, `code` to use the ISO currency code, `name` to use a localized currency name such as `dollar`; the default is `symbol`.
+*default:* `symbol`   
+How to display the currency in currency formatting. Possible values are `symbol` to use a localized currency symbol such as €, `code` to use the ISO currency code, `name` to use a localized currency name such as `dollar`.
 
 
 
 ### Changelog
+
+**version 0.2.3**  
+- Unused option removed.
+- docs improvement
 
 **version 0.2.2**  
 - vue-mny function splitted from vue's install module.

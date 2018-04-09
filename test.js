@@ -14,7 +14,7 @@ module.exports = {
           locale: "en-US",
           style: "currency",
           currency: "USD",
-          currencyDisplay: "symbol"
+          currencyDisplay: "symbol",
         }),
         expected_output: "$1.00"
       },
@@ -35,6 +35,24 @@ module.exports = {
           currencyDisplay: "symbol"
         }),
         expected_output: "€ 1.00"
+      },
+      {
+        input: tester("100", {
+          locale: "nl",
+          style: "currency",
+          currency: "EUR",
+          currencyDisplay: "symbol"
+        }),
+        expected_output: "€ 1.00"
+      },
+      {
+        input: tester("10000", {
+          locale: "nl-NL",
+          style: "currency",
+          currency: "EUR",
+          currencyDisplay: "symbol"
+        }),
+        expected_output: "€ 100.00"
       }
     ];
 

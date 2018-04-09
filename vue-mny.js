@@ -23,7 +23,6 @@ module.exports = {
         style: "currency",
         currency: "USD",
         currencyDisplay: "symbol",
-
         env: "prod"
       },
       optionsUser
@@ -38,7 +37,7 @@ module.exports = {
         }).format(raw / 100);
       } catch (err) {
         if (options.env == "dev") console.error(err);
-        return "[oeps]";
+        return String.toString(raw);
       }
     };
 
@@ -49,8 +48,7 @@ module.exports = {
   install: function(Vue, optionsUser) {
     let vuemny = module.exports.mny(optionsUser);
     Vue.directive("mny", function(el, binding) {
-      el.innerHTML =
-        binding.value instanceof Object
+      el.innerHTML = binding.value instanceof Object
           ? vuemny(binding.value.input, binding.value)
           : vuemny(binding.value);
     });
