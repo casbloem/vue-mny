@@ -1,7 +1,7 @@
 {
   "name": "vue-mny",
-  "version": "0.2.1",
-  "description": "Money formatting for Vue",
+  "version": "0.2.2",
+  "description": "Currency formatting for all currencies, and all languages. As a simple Vue plugin.",
   "main": "vue-mny.js",
   "repository": {
     "type": "git",
@@ -12,11 +12,15 @@
     "money",
     "vue-mny"
   ],
+  "scripts": {
+    "test": "node -p \"require('./test.js').initialStarter()\""
+  },
   "author": "Cas Bloem",
   "license": "MIT",
   "bugs": {
     "url": "https://github.com/casbloem/vue-mny/issues"
   },
   "homepage": "https://packages.cblm.nl/examples/vue-mny",
-  "dependencies": {}
+  "dependencies": {},
+  "devDependencies": {}
 }

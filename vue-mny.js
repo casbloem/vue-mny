@@ -1,5 +1,5 @@
 module.exports = {
-  install: function(Vue, optionsUser) {
+  mny: function(optionsUser) {
     const extend = function() {
       let out = {};
       for (let i = 0, len = arguments.length; i < len; ++i) {
@@ -42,10 +42,12 @@ module.exports = {
       }
     };
 
-    const vuemny = (str, optionsFilter = {}, optionsForce = {}) => {
+    return (str, optionsFilter = {}, optionsForce = {}) => {
       return moneyfy(str, extend(optionsGlobal, optionsFilter, optionsForce));
     };
-
+  },
+  install: function(Vue, optionsUser) {
+    let vuemny = module.exports.mny(optionsUser);
     Vue.directive("mny", function(el, binding) {
       el.innerHTML =
         binding.value instanceof Object
