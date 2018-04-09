@@ -6,7 +6,7 @@ module.exports = {
     log("js-tester 0.0.1 by cblm dev\n");
     log("starting setup...");
     log("importing package(s)\n");
-    const tester = require("./vue-mny.js").vuemny();
+    const tester = require("./vue-mny.js").mny();
     log("setup completed, starting tests now...");
     const tests = [
       {
