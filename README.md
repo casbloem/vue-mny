@@ -26,7 +26,6 @@ npm install vue-mny --save
 const vueMny = require('vue-mny');
 Vue.use(vueMny, {
     locale: 'en-US',
-    style: "currency",
     currency: 'USD',
     currencyDisplay: 'symbol',
 });
@@ -36,7 +35,7 @@ Vue.use(vueMny, {
 
 ![carbon 6](https://user-images.githubusercontent.com/5813001/38521565-621af1b6-3c46-11e8-9d1d-b83ae93e74fb.png)
 
-More
+
 
 see [vue-mny example](https://packages.cblm.nl/examples/vue-mny) to see it live.
 
@@ -86,6 +85,10 @@ How to display the currency in currency formatting. Possible values are `symbol`
 
 **< version 0.2.0**  
 - Initial setup of the package.
+
+
+
+
 
 
 
