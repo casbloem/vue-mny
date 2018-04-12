@@ -1,0 +1,59 @@
+<html>
+
+<head>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
+        crossorigin="anonymous">
+</head>
+
+<body>
+
+    <div id="vue">
+        <div class="container">
+            <h1 class="p-3 display-4">vue-mny</h1>
+            <hr>
+            <h1 class="h5">Simple examples</h1>
+            <p class="lead">The variable <code>moneyVariable</code> is set to <input v-model="moneyVariable"></p>
+            <div class="row">
+                <div class="col-md-8">
+                    <code class="d-block p-2">&lt;span v-mny="moneyVariable"&gt;&lt;/span&gt;</code>
+                    <code class="d-block p-2">&lt;span v-mny="{ input: moneyVariable, currency: 'USD' }"&gt;&lt;/span&gt;</code>
+                    <code class="d-block p-2">&lt;span v-mny.code="moneyVariable"&gt;&lt;/span&gt;</code>
+                </div>
+                <div class="col-md-4">
+                    <p>
+                        <span class="d-block p-2" v-mny="moneyVariable"></span>
+                        <span class="d-block p-2" v-mny="{ input: moneyVariable, currency: 'EUR' }"></span>
+                        <span class="d-block p-2" v-mny.code="moneyVariable"></span>
+                    </p>
+
+                </div>
+            </div>
+
+            <hr>
+
+            <h1 class="h5">Some ideas</h1>
+            <p class="lead">The variable <code>discountVariable</code> is set to <input v-model="discountVariable"></p>
+            <div class="row">
+                    <div class="col-md-8">
+                        <code class="d-block p-2">&lt;span v-mny="moneyVariable - (moneyVariable * (discountVariable / 100))"&gt;&lt;/span&gt;</code>
+                    </div>
+                    <div class="col-md-4">
+                        <p>
+                            <span class="d-block p-2" v-mny="moneyVariable - (moneyVariable * (discountVariable / 100))"></span>
+                        </p>
+    
+                    </div>
+                </div>
+    
+
+
+
+    
+
+        </div>
+    </div>
+
+    <script src="build.js"></script>
+</body>
+
+</html>

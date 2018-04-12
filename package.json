@@ -10,6 +10,13 @@
   "keywords": [
     "vue",
     "money",
+    "currency",
+    "formatting",
+    "format",
+    "vuejs",
+    "EUR",
+    "USD",
+    "mny",
     "vue-mny"
   ],
   "scripts": {
@@ -20,7 +27,6 @@
   "bugs": {
     "url": "https://github.com/casbloem/vue-mny/issues"
   },
-  "homepage": "https://packages.cblm.nl/examples/vue-mny",
   "dependencies": {},
   "devDependencies": {}
 }

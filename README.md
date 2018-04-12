@@ -11,11 +11,10 @@ Currency formatting for all currencies, and all languages. As a simple Vue plugi
 [![Build Status](https://travis-ci.org/casbloem/vue-mny.svg?branch=master)](#)
 
 
-#### v0.3.0   
-version 0.3.0 alpha 1
+#### v0.3.1   
 
 
-### Setup
+## Setup
 ```bash
 npm install vue-mny --save
 ```
@@ -29,22 +28,24 @@ Vue.use(vueMny, {
 });
 ```
 
-### Usage
-
+## Usage    
+![easyway](https://user-images.githubusercontent.com/5813001/38654333-01b58384-3e0f-11e8-9a0a-c9edd4aed56b.png)     
 ```javascript
 <span v-mny="moneyVariable"></span>    
+```     
+    
+
+![withoptions](https://user-images.githubusercontent.com/5813001/38654346-126e7b68-3e0f-11e8-8d10-a32b73a7d058.png)      
+
+```javascript 
 <span v-mny="{ input: moneyVariable, currency: 'EUR' }"></span>    
-<span v-mny.code="moneyVariable"></span>    
-```
 
-![carbon 6](https://user-images.githubusercontent.com/5813001/38521565-621af1b6-3c46-11e8-9d1d-b83ae93e74fb.png)
-
-
+// shorthand:
+<span v-mny.code="moneyVariable"></span>
+```  
 
 
-
-
-### Options
+## Options 
 ```javascript
 {
     locale: 'en-US',
@@ -54,26 +55,29 @@ Vue.use(vueMny, {
 ```
 
 
-##### locale
+### locale
 *default:* `en-US`    
 A string with a [BCP 47 language tag](https://www.w3.org/International/articles/language-tags/).
 
-##### currency
+### currency
 
 *default:* `USD`   
 
 Possible values are the [ISO 4217 currency codes](https://www.ibm.com/support/knowledgecenter/en/SSZLC2_7.0.0/com.ibm.commerce.payments.developer.doc/refs/rpylerl2mst97.htm), such as `USD` for the US dollar, `EUR` for the euro, or `CNY` for the Chinese RMB.
 
-##### currencyDisplay
+### currencyDisplay
 *default:* `symbol`   
 How to display the currency in currency formatting. Possible values are `symbol` to use a localized currency symbol such as €, `code` to use the ISO currency code, `name` to use a localized currency name such as `dollar`.
 
 
 
-### Changelog
+## Changelog
+
+**version 0.3.1**   
+- Patch
 
 **version 0.3.0**   
-- 
+- Major improvements...
 
 
 
