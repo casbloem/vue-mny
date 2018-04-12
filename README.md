@@ -14,8 +14,6 @@ Currency formatting for all currencies, and all languages. As a simple Vue plugi
 #### v0.3.0   
 version 0.3.0 alpha 1
 
->> Please note that NPM is not @ v0.3.0 yet. Hold on.
-
 
 ### Setup
 ```bash
