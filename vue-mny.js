@@ -23,34 +23,58 @@ module.exports = {
         style: "currency",
         currency: "USD",
         currencyDisplay: "symbol",
-        env: "prod"
       },
       optionsUser
     );
 
-    const moneyfy = (raw, options) => {
-      try {
-        return new Intl.NumberFormat(options.locale, {
-          style: options.style,
-          currency: options.currency,
-          currencyDisplay: options.currencyDisplay
-        }).format(raw / 100);
-      } catch (err) {
-        if (options.env == "dev") console.error(err);
-        return String.toString(raw);
-      }
+    const moneyfy = (r, options) => {
+      let n = Number(r);
+      if (isNaN(n) || !isFinite(n)) return '[invalid]';
+      return new Intl.NumberFormat(options.locale, {
+        style: options.style,
+        currency: options.currency,
+        currencyDisplay: options.currencyDisplay
+      }).format(n);
     };
 
-    return (str, optionsFilter = {}, optionsForce = {}) => {
-      return moneyfy(str, extend(optionsGlobal, optionsFilter, optionsForce));
+    const modsToOpts = mods => {
+      let r = {};
+      let y = {
+        symbol: "currencyDisplay",
+        code: "currencyDisplay"
+      };
+      for (let i in mods)
+        if (y.hasOwnProperty(mods[i])) r[y[mods[i]]] = mods[i];
+      return r;
+    };
+
+    return (str, optionsFilter = {}, mods = {}) => {
+      return moneyfy(
+        str,
+        extend(optionsGlobal, optionsFilter, modsToOpts(mods))
+      );
     };
   },
+
   install: function(Vue, optionsUser) {
-    let vuemny = module.exports.mny(optionsUser);
-    Vue.directive("mny", function(el, binding) {
-      el.innerHTML = binding.value instanceof Object
-          ? vuemny(binding.value.input, binding.value)
-          : vuemny(binding.value);
+    Vue.directive("mny", (el, binding) => {
+      let mny = module.exports.mny(optionsUser);
+      let mods = Object.keys(binding.modifiers).filter(function(k) {
+        return binding.modifiers[k];
+      });
+      let bval = binding.value;
+      let returnString = "[invalid]";
+      if (
+        typeof bval == "number" ||
+        (typeof bval == "object" && bval instanceof Number) ||
+        typeof bval == "string" ||
+        typeof bval == "integer"
+      )
+        returnString = mny(bval, {}, mods);
+      if (typeof bval == "object" && bval.hasOwnProperty("input"))
+        returnString = mny(bval.input, bval, mods);
+
+      el.innerHTML = returnString;
     });
   }
 };

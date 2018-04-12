@@ -11,10 +11,10 @@ Currency formatting for all currencies, and all languages. As a simple Vue plugi
 [![Build Status](https://travis-ci.org/casbloem/vue-mny.svg?branch=master)](#)
 
 
+#### v0.3.0   
+version 0.3.0 alpha 1
 
-### Example
-You can find an example at https://packages.cblm.nl/examples/vue-mny
-
+>> Please note that NPM is not @ v0.3.0 yet. Hold on.
 
 
 ### Setup
@@ -33,11 +33,16 @@ Vue.use(vueMny, {
 
 ### Usage
 
+```javascript
+<span v-mny="moneyVariable"></span>    
+<span v-mny="{ input: moneyVariable, currency: 'EUR' }"></span>    
+<span v-mny.code="moneyVariable"></span>    
+```
+
 ![carbon 6](https://user-images.githubusercontent.com/5813001/38521565-621af1b6-3c46-11e8-9d1d-b83ae93e74fb.png)
 
 
 
-see [vue-mny example](https://packages.cblm.nl/examples/vue-mny) to see it live.
 
 
 
@@ -69,23 +74,8 @@ How to display the currency in currency formatting. Possible values are `symbol`
 
 ### Changelog
 
-**version 0.2.3**  
-- Unused option removed.
-- docs improvement
-
-**version 0.2.2**  
-- vue-mny function splitted from vue's install module.
-- docs improvement
-- Added test.js.
-
-
-**version 0.2.1**  
-- docs improvement
-
-
-**< version 0.2.0**  
-- Initial setup of the package.
-
+**version 0.3.0**   
+- 
 
 
 

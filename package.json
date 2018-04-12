@@ -1,6 +1,6 @@
 {
   "name": "vue-mny",
-  "version": "0.2.3",
+  "version": "0.3.0",
   "description": "Currency formatting for all currencies, and all languages. As a simple Vue plugin.",
   "main": "vue-mny.js",
   "repository": {
